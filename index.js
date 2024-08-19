@@ -9,13 +9,13 @@ const PORT = process.env.PORT || 5000;
 //MiddleWare
 app.use(cors());
 app.use(express.json());
-app.use
 
 if (process.env.NODE_ENV === "production"){
     app.use(express.static(path.join(__dirname, "client/build")));
 }
 
-//Routes
+console.log(__dirname);
+console.log(path.join(__dirname, "client/build"));
 
 //Add Semesterly Data
 //need to learn more about uploading data on the front end before
@@ -182,6 +182,11 @@ app.get('/getRecentTable', async (req, res) => {
     }
 });
 
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
+  });
+  
 
 app.listen(PORT, () => {
     console.log('App has started on port ${PORT}')

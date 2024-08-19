@@ -12,3 +12,9 @@
 --    cummaltive_GPA float NOT NULL
 --);
 
+CREATE TABLE IF NOT EXISTS test (
+                id SERIAL PRIMARY KEY,
+                Name VARCHAR(255),
+                SemesterGPA DECIMAL(3, 2),
+                CumulativeGPA DECIMAL(3, 2)
+            );
