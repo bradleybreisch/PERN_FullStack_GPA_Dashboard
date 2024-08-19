@@ -7,7 +7,7 @@ const ProtectedFileUpload = () => {
   //const correctPassword = process.env.REACT_APP_UPLOAD_PASSWORD; // Store your password securely
 
   const handlePasswordSubmit = async(password) => {
-    const response = await fetch('http://localhost:5000/api/verify-password', {
+    const response = await fetch('/api/verify-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

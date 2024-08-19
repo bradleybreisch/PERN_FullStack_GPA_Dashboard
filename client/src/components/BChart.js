@@ -8,7 +8,7 @@ function RenderBarCharts() {
   // API call to get all table names
   const getTableNames = async () => {
     try {
-      const response = await fetch('http://localhost:5000/getTableNames');
+      const response = await fetch('/getTableNames');
       const tables = await response.json();
       setTableNames(tables);
     } catch (err) {
@@ -19,7 +19,7 @@ function RenderBarCharts() {
   // API call to get the data from a specific table
   const getGrades = async (tableName) => {
     try {
-      const response = await fetch('http://localhost:5000/getGrades', {
+      const response = await fetch('/getGrades', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

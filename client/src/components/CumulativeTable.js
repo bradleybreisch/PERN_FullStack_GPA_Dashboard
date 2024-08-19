@@ -22,7 +22,7 @@ function RenderCumulativeDataTable() {
     const getGrades = async (tableName) => {
         try {
             console.log('Cumulative Table get Grades Initiated');
-            const response = await fetch('http://localhost:5000/topGradesCum', {
+            const response = await fetch('/topGradesCum', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ function RenderCumulativeDataTable() {
     const getTableName = async () => {
         try {
             console.log('Cumulative Table get table Name Initiated');
-            const response = await fetch('http://localhost:5000/getRecentTable');
+            const response = await fetch('/getRecentTable');
             const title = await response.json();
             setTableName(title);
             console.log(title);

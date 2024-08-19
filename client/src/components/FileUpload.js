@@ -31,7 +31,7 @@ function FileUpload() {
         });
     }*/
     try {
-        const response = await fetch('http://localhost:5000/uploadGrades', {
+        const response = await fetch('/uploadGrades', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

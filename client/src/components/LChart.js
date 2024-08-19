@@ -5,7 +5,7 @@ function RenderLineChart() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getAverageGPA')
+        fetch('/getAverageGPA')
             .then(response => response.json())
             .then(data => {
                 const formattedData = data.map(item => ({
